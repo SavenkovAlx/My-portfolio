@@ -11,7 +11,7 @@
   width: 28px;
   height: 3px;
   margin: 0 0 5px 0;
-  background: #fff;
+  background: set-text-color($main_color);
   @include ease_0ut;
 }
 
@@ -67,7 +67,7 @@
     background: rgba(darken($main_color, 5), 0.9);
     list-style: none;
     transform: translate3d(0, -100%, 0);
-    @include ease_0ut
+    @include ease_0ut;
     
     //Выпадание сверху
 
@@ -80,7 +80,7 @@
   &-branding {
     background: rgba($main_color, 0.9);
     transform: translate3d(0, 100%, 0);
-    @include ease_0ut
+    @include ease_0ut;
    
     //Выпадание снизу
     &.show {
@@ -117,7 +117,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 500;
-    color: #fff;
+    color: set-text-color($main_color);
     text-decoration: none;
     @include ease_0ut;
 

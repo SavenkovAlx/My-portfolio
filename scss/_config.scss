@@ -1,5 +1,5 @@
-$main_color: #444;
-$secondary_color: #eece1a;
+$main_color: #101825;
+$secondary_color: #eb1e24;
 $show-home-img: true;
 $home-img: url(../img/background.jpg);
 $background-opacity: 0.9;
@@ -23,11 +23,23 @@ $background-opacity: 0.9;
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba($main_color, $background-opacity)
+      background: rgba($main_color, $background-opacity);
     }
   }
 }
 }
+
+//Функция для цвета текста на белом фоне
+
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  }@else {
+    @return #fff;
+  }
+}
+
+
 
 //Миксины медиа запросов
 
