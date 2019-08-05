@@ -1,10 +1,18 @@
 //Широкоформатные
 
-@include mediaXl {}
+@include mediaXl {
+  .projects {
+    grid-template-columns: repeat(4, 1fr)
+  }
+}
 
 //ПК, ноутубки
 
-@include mediaLg {}
+@include mediaLg {
+  .projects {
+    grid-template-columns: repeat(3, 1fr)
+  }
+}
 
 //Планшеты, маленький ноутубки
 
@@ -53,7 +61,9 @@
       'bio';
       grid-template-columns: 1fr;
   }
-
+  .projects {
+    grid-template-columns: repeat(2, 1fr)
+  }
 
 }
 
@@ -68,7 +78,7 @@
 
     .lg-heading {
       margin-top:1rem;
-      font-size: 4rem;
+      font-size: 5rem;
     }
   }
 

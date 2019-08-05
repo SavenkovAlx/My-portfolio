@@ -50,7 +50,7 @@ header {
 
 main {
   padding: 4rem;
- min-height: calc(100vh-60px);
+  min-height: calc(100vh - 60px);
 
   .social-media {
     margin-top: 5rem;
@@ -89,6 +89,49 @@ main {
     grid-area: bio;
     font-size: 1.5rem;
   }
+}
+
+//Work/Мои работы
+
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+  
+  img {
+    width: 100%;
+    border: 3px set-text-color($main_color) solid;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary_color;
+      @include ease_0ut;
+    }
+  }
+}
+
+//Стили кнопок
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.3rem;
+
+&:hover {
+  background: $secondary_color;
+  color: set-text-color($secondary_color)
+}
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($main_color, 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($main_color, 50);
+  color: #0c121d;
 }
 
 #main-footer {
