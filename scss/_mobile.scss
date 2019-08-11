@@ -82,7 +82,15 @@
     }
   }
 
-  .projects {
+   .projects {
     grid-template-columns: 1fr;
   }
+  
+  #contact .lg-heading, #home .lg-heading {
+   font-size: 4.3rem;
+  }
+
+    .break-word {
+      word-break: break-all;
+    }
 }
