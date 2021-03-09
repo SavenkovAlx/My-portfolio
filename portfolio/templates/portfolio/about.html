@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+About - {{ block.super }}
+{% endblock title %}
+{% block main %}
+<main id="about">
+  <h1 class="lg-heading">
+    About <span class="scnd-color_text">me</span>
+  </h1>
+  <h2 class="sm-heading">
+    A few things about me
+  </h2>
+  <div class="about-info">
+    <img src="{% static 'img/portrait.jpg' %}" alt="Alexander Savenkov" class="bio_img">
+    <div class="bio">
+      <h3 class="scnd-color_text">BIO</h3>
+      <p>I am a Python Developer from Sumy, Ukraine. I study in the Sumy State University on the specialty network and
+        Internet technologies. Like to work with the network, websites and I like to do it with Python and its Django
+        and Flask frameworks.</p>
+    </div>
+  </div>
+</main>
+{% endblock main %}
+{% block footer %}
+{% include 'inc/_footer.html' %}
+{% endblock footer %}

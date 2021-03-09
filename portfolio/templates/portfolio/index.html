@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+{{ block.super }} - Portfolio
+{% endblock %}
+
+{% block body %}
+{% include 'inc/_header.html' %}
+{% block main %}
+
+<body id="bg-img">
+  <main id="home">
+    <h1 class="lg-heading">
+      Oleksandr <span class="scnd-color_text">Savenkov</span>
+    </h1>
+    <h2 class="sm-heading">
+      Student | Programmer | Python Enthusiast
+    </h2>
+    <div class="social-media">
+      <a href="https://t.me/svnAlx">
+        <i class="fab fa-telegram fa-2x"></i>
+      </a>
+      <a href="viber://chat?number=+380975041075">
+        <i class="fab fa-viber fa-2x"></i>
+      </a>
+      <a href="https://www.facebook.com/savenkov.sunshine">
+        <i class="fab fa-facebook fa-2x"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/svnkvalx/">
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      <a href="https://github.com/SavenkovAlx">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+    </div>
+  </main>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}
+Contact - {{ block.super }}
+{% endblock title %}
+{% block main %}
+<main id="contact">
+  <h1 class="lg-heading">
+    Сontact me
+  </h1>
+  <h2 class="sm-heading">
+    Ways to contact me other than social media
+  </h2>
+  <div class="boxes">
+    <div>
+      <span class="scnd-color_text">Email:
+      </span> <a href="mailto:savenkovalx@gmail.com"><span class="break-word">savenkovalx@gmail.com</span></a>
+    </div>
+    <div>
+      <span class="scnd-color_text">Phone:
+      </span> <a href="tel:+380975041075">+38 (097) 504-10-75</a>
+    </div>
+  </div>
+</main>
+{% endblock main %}
+{% block footer %}
+{% include 'inc/_footer.html' %}
+{% endblock footer %}

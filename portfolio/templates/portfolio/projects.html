@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}
+Projects - {{ block.super }}
+{% endblock title %}
+{% block main %}
+<main id="work">
+  <h1 class="lg-heading">
+    My <span class="scnd-color_text">Projects</span>
+  </h1>
+  <h2 class="sm-heading">
+    Take a look at some of my works
+  </h2>
+  <div class="projects">
+    {% for item in projects %}
+    <div class="item">
+      {% if item.project_url %}
+      <a href="{{ item.project_url }}" target="_blank">
+        <img src="{{ item.image.url }}" alt="Project">
+      </a>
+      <a href="{{ item.project_url }}""
+      target=" _blank" class="btn-light">
+        <i class="fas fa-eye"></i> {{ item.title }}
+      </a>
+      {% else %}
+      <a href="{{ item.github_url }}" target="_blank">
+        <img src="{{ item.image.url }}" alt="Project">
+      </a>
+      <a href="{{ item.github_url }}""
+      target=" _blank" class="btn-light">
+        <i class="fas fa-eye"></i> {{ item.title }}
+      </a>
+      {% endif %}
+      <a href="{{ item.github_url }}"" target=" _blank" class="btn-dark">
+        <i class="fab fa-github"></i> Github
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</main>
+{% endblock main %}
+{% block footer %}
+{% include 'inc/_footer.html' %}
+{% endblock footer %}
